@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Copywriting & Marketing Generator - Startup SMK</title>
+    
+    <!-- Menghubungkan File CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">Solusi Bisnis Berbasis AI</span>
+            <h1>AI Marketing Copilot untuk UMKM</h1>
+            <p>Bantu bisnis lokal dan UMKM membuat teks promosi profesional, ide konten, dan slogan penjualan secara otomatis dalam hitungan detik.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        
+        <!-- Section Form Input -->
+        <section class="card input-section">
+            <h2> Generator Promo AI</h2>
+            <p class="subtitle">Isi formulir di bawah ini untuk menghasilkan materi pemasaran instan.</p>
+
+            <form id="aiForm" onsubmit="event.preventDefault(); runAIFeature();">
+                <div class="form-group">
+                    <label for="productName">Nama Produk / Jasa:</label>
+                    <input type="text" id="productName" placeholder="Contoh: Keripik Pisang Lumer 'Snackia'" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Kategori Bisnis:</label>
+                    <select id="category">
+                        <option value="kuliner">Kuliner / Makanan & Minuman</option>
+                        <option value="fashion">Fashion & Pakaian</option>
+                        <option value="jasa">Jasa / Layanan Keterampilan</option>
+                        <option value="elektronik">Teknologi / Gadget</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="targetAudience">Target Pasar Utama:</label>
+                    <input type="text" id="targetAudience" placeholder="Contoh: Remaja, Mahasiswa, Pekerja Kantor" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tone">Gaya Bahasa (Tone of Voice):</label>
+                    <select id="tone">
+                        <option value="santai">Santai & Kekinian (Anak Muda)</option>
+                        <option value="profesional">Profesional & Terpercaya</option>
+                        <option value="persuasif">Sangat Membujuk (Hard Sell)</option>
+                        <option value="lucu">Humoris & Menghibur</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btnSubmit">
+                    <span>✨ Hasilkan Materi Promosi dengan AI</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Section Hasil AI -->
+        <section class="card output-section" id="outputCard" style="display: none;">
+            <h2>💡 Hasil Rekomendasi AI</h2>
+            <div id="loading" class="loading-spinner" style="display: none;">
+                <p>⏳ AI sedang menganalisis target pasar dan menyusun kalimat promo terbaik...</p>
+            </div>
+
+            <div id="aiResultContent" class="result-content">
+                <!-- Hasil simulasi AI akan muncul di sini via JavaScript -->
+            </div>
+
+            <button class="btn-copy" onclick="copyResult()">📋 Salin Hasil Teks</button>
+        </section>
+
+        <!-- Section Monetisasi / Pricing (Paket Layanan) -->
+        <section class="card pricing-section">
+            <h2>💰 Paket Langganan Startup</h2>
+            <p class="subtitle">Model Monetisasi Bisnis Kami</p>
+
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Gratis</h3>
+                    <p class="price">Rp 0 <span>/ bulan</span></p>
+                    <ul>
+                        <li>✔ 3x Generasi Promo/hari</li>
+                        <li>✔ Template Standar</li>
+                        <li>✖ Fitur Simpan Ide</li>
+                    </ul>
+                    <button class="btn-outline">Gunakan Sekarang</button>
+                </div>
+
+                <div class="price-card popular">
+                    <span class="popular-tag">Paling Laris</span>
+                    <h3>Pro UMKM</h3>
+                    <p class="price">Rp 29.000 <span>/ bulan</span></p>
+                    <ul>
+                        <li>✔ Unlimited Generasi Promo</li>
+                        <li>✔ Semua Gaya Bahasa (Tone)</li>
+                        <li>✔ Ekspor ke WhatsApp & IG</li>
+                    </ul>
+                    <button class="btn-primary">Langganan Pro</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 AI Marketing Copilot - Diisi oleh Tim Wirausaha Digital SMK</p>
+    </footer>
+
+    <!-- Menghubungkan File JavaScript Eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
